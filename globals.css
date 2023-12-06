@@ -1,0 +1,166 @@
+:root {
+    --branco: #fff;
+    --azul: #0D5398;
+    --laranja: #E87923;
+    --titulo: 900 42px 'Montserrat', sans-serif;
+    --subtitulo: 500 18px 'Roboto', sans-serif;
+}
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Altere a quantidade de movimento vertical desejada */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main{
+    background: url(assets/bg_hero.png) no-repeat center center fixed;
+    background-size: cover;
+    padding: 10px  200px;
+    height: 100vh;
+    width: auto;
+    overflow-x: hidden;
+}
+
+.icons {
+    display: flex;
+    align-items: center;   
+    justify-content: space-around;
+    width: 15%; 
+}
+
+.hero_content {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.side_nav {
+    margin-top: 5rem;
+    margin-right: 5rem;
+    border-radius: 20rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 5rem;
+    height: 20rem;
+    background-color: rgb(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero_text {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+
+.titulo {
+    font: var(--titulo);
+    color: var(--branco);
+    margin-bottom: 1rem;
+}
+
+.subtitulo {
+    font: var(--subtitulo);
+    color: var(--branco);
+    margin-bottom: 1rem;
+}
+
+.titulo span {
+    color: var(--laranja);
+}
+
+.hero_img {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+.hero_img img {
+    width: 65%;
+    height: 100%;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+}
+
+.svg_container {
+    position: absolute;
+    background: transparent;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.svg_container img:nth-child(1) {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    opacity: 0.5;
+}
+
+.svg_container img:nth-child(2) {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    opacity: 0.5;
+}
+
+.svg_container img:nth-child(3) {
+    position: absolute;
+    top: 22%;
+    left: 20%;
+    opacity: 0.5;
+}
+
+.svg_container img:nth-child(4) {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    opacity: 0.5;
+}
+
+.svg_container img:nth-child(5) {
+    position: absolute;
+    top: 77%;
+    left: 20%;
+    opacity: 0.5;
+}
+
